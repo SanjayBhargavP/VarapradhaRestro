@@ -3,8 +3,6 @@
 
 generator client {
     provider = "prisma-client-js"
-    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
-    output = "/home/ubuntu/varaprada_restro_website/node_modules/.prisma/client"
 }
 
 datasource db {
@@ -35,13 +33,13 @@ enum Role {
 }
 
 model MenuItem {
-  id          String   @id @default(cuid())
+  id          Int   @id @default(autoincrement())
   name        String
   description String?
   price       Float
   image       String?
   category    Category @relation(fields: [categoryId], references: [id])
-  categoryId  String
+  categoryId  Int
   isVeg       Boolean  @default(false)
   isPopular   Boolean  @default(false)
   isAvailable Boolean  @default(true)
@@ -52,7 +50,7 @@ model MenuItem {
 }
 
 model Category {
-  id          String     @id @default(cuid())
+  id          Int     @id @default(autoincrement())
   name        String
   description String?
   image       String?
@@ -62,7 +60,7 @@ model Category {
 }
 
 model Order {
-  id              String      @id @default(cuid())
+  id              Int      @id @default(autoincrement())
   user            User        @relation(fields: [userId], references: [id])
   userId          String
   items           OrderItem[]
@@ -78,11 +76,11 @@ model Order {
 }
 
 model OrderItem {
-  id         String   @id @default(cuid())
+  id         Int   @id @default(autoincrement())
   order      Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  orderId    String
+  orderId    Int
   menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
-  menuItemId String
+  menuItemId Int
   quantity   Int
   price      Float
   createdAt  DateTime @default(now())

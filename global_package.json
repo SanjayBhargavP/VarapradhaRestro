@@ -3,6 +3,9 @@
     "workspaces": [
         "app"
     ],
+    "prisma": {
+        "schema": "prisma/schema.prisma"
+    },
     "devDependencies": {
         "@next/swc-wasm-nodejs": "13.5.1",
         "@types/node": "20.6.2",
