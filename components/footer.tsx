@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Varaprada Restro</h3>
+            <h3 className="text-xl font-bold">Varapradha Restro</h3>
             <p className="text-muted-foreground">
               Experience the authentic taste of India with our carefully crafted dishes made from the finest ingredients.
             </p>
@@ -42,11 +42,11 @@ const Footer = () => {
                   Menu
                 </Link>
               </li>
-              <li>
-                <Link href="/reservation" className="text-muted-foreground hover:text-primary transition-colors">
-                  Reservation
-                </Link>
-              </li>
+              {/*<li>*/}
+              {/*  <Link href="/reservation" className="text-muted-foreground hover:text-primary transition-colors">*/}
+              {/*    Reservation*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
@@ -103,7 +103,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} Varaprada Restro. All rights reserved.
+            &copy; {new Date().getFullYear()} Varapradha Restro. All rights reserved.
           </p>
         </div>
       </div>

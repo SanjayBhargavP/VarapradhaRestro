@@ -12,7 +12,7 @@ const testimonials = [
     id: '1',
     name: 'Priya Sharma',
     rating: 5,
-    comment: 'The food at Varaprada Restro is absolutely delicious! The butter chicken and naan are the best I\'ve had in Hyderabad. The staff is friendly and the ambiance is perfect for both family dinners and special occasions.',
+    comment: 'The food at Varapradha Restro is absolutely delicious! The butter chicken and naan are the best I\'ve had in Hyderabad. The staff is friendly and the ambiance is perfect for both family dinners and special occasions.',
   },
   {
     id: '2',
@@ -24,7 +24,7 @@ const testimonials = [
     id: '3',
     name: 'Ananya Patel',
     rating: 4,
-    comment: 'We had a wonderful experience at Varaprada Restro. The table reservation system was smooth, and they accommodated our special requests for a birthday celebration. The food was excellent, especially the paneer dishes.',
+    comment: 'We had a wonderful experience at Varapradha Restro. The table reservation system was smooth, and they accommodated our special requests for a birthday celebration. The food was excellent, especially the paneer dishes.',
   },
   {
     id: '4',

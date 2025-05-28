@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
@@ -15,12 +15,19 @@ import CountUpNumber from '@/components/count-up-number';
 export default function Home() {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
   }, [controls, inView]);
+
+  const handleComingSoon = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowConfetti(true);
+    setTimeout(() => setShowConfetti(false), 3000);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +64,7 @@ export default function Home() {
             className="space-y-6"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white text-shadow">
-              Welcome to <span className="text-primary">Varaprada Restro</span>
+              Welcome to <span className="text-primary">Varapradha Restro</span>
             </h1>
             <p className="text-xl md:text-2xl text-white text-shadow max-w-2xl mx-auto">
               Experience the authentic flavors of India with our carefully crafted dishes
@@ -68,11 +75,11 @@ export default function Home() {
                   View Our Menu <Utensils className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg bg-white/10 backdrop-blur-sm text-white hover:bg-white/20">
-                <Link href="/reservation">
-                  Reserve a Table <Calendar className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+              {/*<Button asChild size="lg" variant="outline" className="text-lg bg-white/10 backdrop-blur-sm text-white hover:bg-white/20">*/}
+              {/*  <Link href="/reservation">*/}
+              {/*    Reserve a Table <Calendar className="ml-2 h-5 w-5" />*/}
+              {/*  </Link>*/}
+              {/*</Button>*/}
             </div>
           </motion.div>
         </div>
@@ -93,7 +100,7 @@ export default function Home() {
                 Discover <span className="text-primary">Our Story</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Varaprada Restro brings the authentic taste of India to Hyderabad. Our restaurant combines traditional recipes with modern culinary techniques to create an unforgettable dining experience.
+                Varapradha Restro brings the authentic taste of India to Hyderabad. Our restaurant combines traditional recipes with modern culinary techniques to create an unforgettable dining experience.
               </p>
               <p className="text-lg text-muted-foreground">
                 Located near Sri Indu College, we've been serving the community with love and passion since our establishment. Our chefs use only the freshest ingredients to prepare dishes that capture the essence of Indian cuisine.
@@ -122,10 +129,10 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div variants={itemVariants} className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image 
-                src="/23246ab82c71b4b044e482be524e5791.jpg" 
-                alt="Varaprada Restro Interior" 
-                fill 
+              <Image
+                src="/Two.jpg"
+                alt="Varapradha Restro Interior"
+                fill
                 className="object-cover rounded-xl"
               />
             </motion.div>
@@ -172,10 +179,8 @@ export default function Home() {
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
               Enjoy a memorable dining experience with your loved ones. Book a table in advance to avoid waiting.
             </p>
-            <Button asChild size="lg" className="text-lg">
-              <Link href="/reservation">
-                Make a Reservation <Calendar className="ml-2 h-5 w-5" />
-              </Link>
+            <Button onClick={handleComingSoon} size="lg" variant="secondary" className="text-lg">
+              Coming Soon <Calendar className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
         </div>
@@ -244,13 +249,13 @@ export default function Home() {
               viewport={{ once: true }}
               className="h-[400px] rounded-xl overflow-hidden shadow-xl"
             >
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.4144872893257!2d78.58016937469272!3d17.30000798281285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba659868b4727%3A0x6a3c7a71f512b23e!2sSri%20Indu%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1718035050787!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.4144872893257!2d78.58016937469272!3d17.30000798281285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba659868b4727%3A0x6a3c7a71f512b23e!2sSri%20Indu%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1718035050787!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-xl"
               ></iframe>
@@ -275,13 +280,18 @@ export default function Home() {
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Order online and enjoy our authentic Indian cuisine from the comfort of your home
             </p>
-            <Button asChild size="lg" variant="secondary" className="text-lg">
-              <Link href="/menu">
-                Order Now <Utensils className="ml-2 h-5 w-5" />
-              </Link>
+            <Button onClick={handleComingSoon} size="lg" variant="secondary" className="text-lg">
+              Coming Soon <Utensils className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
         </div>
+
+        {/* Confetti Overlay */}
+        {showConfetti && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+              <Image src="/confetti.gif" alt="Confetti" width={300} height={300} className="pointer-events-none" />
+            </div>
+        )}
       </section>
     </div>
   );
