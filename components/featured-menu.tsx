@@ -109,9 +109,9 @@ const FeaturedMenu = () => {
                   <span className="font-semibold text-primary">{formatPrice(item.price)}</span>
                 </div>
                 <p className="text-muted-foreground text-sm line-clamp-2">{item.description}</p>
-                <Button className="w-full mt-2">
-                  Add to Cart <ShoppingCart className="ml-2 h-4 w-4" />
-                </Button>
+                {/*<Button className="w-full mt-2">*/}
+                {/*  Add to Cart <ShoppingCart className="ml-2 h-4 w-4" />*/}
+                {/*</Button>*/}
               </div>
             </CardContent>
           </Card>

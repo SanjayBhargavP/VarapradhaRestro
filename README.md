@@ -1,6 +1,6 @@
-# Varaprada Restro - Restaurant Website
+# Varapradha Restro - Restaurant Website
 
-A modern, responsive website for Varaprada Restro, an authentic Indian restaurant located in Hyderabad, India. The website allows customers to browse the menu, place online orders, and make table reservations.
+A modern, responsive website for Varapradha Restro, an authentic Indian restaurant located in Hyderabad, India. The website allows customers to browse the menu, place online orders, and make table reservations.
 
 ## Features
 
@@ -31,8 +31,8 @@ A modern, responsive website for Varaprada Restro, an authentic Indian restauran
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/varaprada-restro.git
-   cd varaprada-restro
+   git clone https://github.com/yourusername/Varapradha-restro.git
+   cd Varapradha-restro
    ```
 
 2. Install dependencies:
@@ -43,7 +43,7 @@ A modern, responsive website for Varaprada Restro, an authentic Indian restauran
 3. Set up environment variables:
    Create a `.env` file in the root directory with the following variables:
    ```
-   DATABASE_URL="postgresql://username:password@localhost:5432/varaprada_restro"
+   DATABASE_URL="postgresql://username:password@localhost:5432/Varapradha_restro"
    NEXTAUTH_SECRET="your-secret-key"
    NEXTAUTH_URL="http://localhost:3000"
    ```

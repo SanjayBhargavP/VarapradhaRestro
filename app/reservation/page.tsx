@@ -94,7 +94,7 @@ export default function ReservationPage() {
               Reserve Your <span className="text-primary">Table</span>
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Book a table in advance to ensure a memorable dining experience at Varaprada Restro
+              Book a table in advance to ensure a memorable dining experience at Varapradha Restro
             </p>
           </motion.div>
         </div>
@@ -114,7 +114,7 @@ export default function ReservationPage() {
                 Make a <span className="text-primary">Reservation</span>
               </h2>
               <p className="text-muted-foreground">
-                Fill out the form to reserve your table at Varaprada Restro. We'll confirm your reservation via email or phone.
+                Fill out the form to reserve your table at Varapradha Restro. We'll confirm your reservation via email or phone.
               </p>
               <div className="space-y-4 mt-8">
                 <div className="flex items-center space-x-3">
