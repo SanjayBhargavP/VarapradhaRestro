@@ -1,4 +1,7 @@
 const path = require('path');
+const REPO = 'VarapradhaRestro';
+const isProd = process.env.NODE_ENV === 'production';
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,6 +9,8 @@ const nextConfig = {
   output: 'export',
   // Ensure directories end with a slash (nice for Pages):
   trailingSlash: true,
+  basePath:   isProd ? `/${REPO}`   : '',
+  assetPrefix: isProd ? `/${REPO}/` : '',
   experimental: {
     outputFileTracingRoot: path.join(__dirname, '../'),
   },
