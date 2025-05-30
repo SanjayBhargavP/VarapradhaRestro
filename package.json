@@ -79,5 +79,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
-  "homepage": "https://sanjaybhargavp.github.io/VarapradhaRestro/"
+  "homepage": "https://varapradharestro.in"
 }
