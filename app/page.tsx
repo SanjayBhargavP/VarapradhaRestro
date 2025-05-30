@@ -86,59 +86,59 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-secondary/30">
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={controls}
-          className="max-w-6xl mx-auto"
-        >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Discover <span className="text-primary">Our Story</span>
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Varapradha Restro brings the authentic taste of India to Hyderabad. Our restaurant combines traditional recipes with modern culinary techniques to create an unforgettable dining experience.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Located near Sri Indu College, we've been serving the community with love and passion since our establishment. Our chefs use only the freshest ingredients to prepare dishes that capture the essence of Indian cuisine.
-              </p>
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">
-                  <ChefHat className="h-8 w-8 text-primary mb-2" />
-                  <CountUpNumber value={15} duration={2} />
-                  <p className="text-sm text-muted-foreground">Expert Chefs</p>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">
-                  <Award className="h-8 w-8 text-primary mb-2" />
-                  <CountUpNumber value={8} duration={2} />
-                  <p className="text-sm text-muted-foreground">Years of Excellence</p>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">
-                  <ThumbsUp className="h-8 w-8 text-primary mb-2" />
-                  <CountUpNumber value={95} duration={2} />
-                  <p className="text-sm text-muted-foreground">Satisfaction Rate</p>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">
-                  <Users className="h-8 w-8 text-primary mb-2" />
-                  <CountUpNumber value={10000} duration={2} />
-                  <p className="text-sm text-muted-foreground">Happy Customers</p>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div variants={itemVariants} className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/Two.jpg"
-                alt="Varapradha Restro Interior"
-                fill
-                className="object-cover rounded-xl"
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+      {/*<section className="py-20 px-4 bg-secondary/30">*/}
+      {/*  <motion.div*/}
+      {/*    ref={ref}*/}
+      {/*    variants={containerVariants}*/}
+      {/*    initial="hidden"*/}
+      {/*    animate={controls}*/}
+      {/*    className="max-w-6xl mx-auto"*/}
+      {/*  >*/}
+      {/*    <div className="grid md:grid-cols-2 gap-12 items-center">*/}
+      {/*      <motion.div variants={itemVariants} className="space-y-6">*/}
+      {/*        <h2 className="text-3xl md:text-4xl font-bold">*/}
+      {/*          Discover <span className="text-primary">Our Story</span>*/}
+      {/*        </h2>*/}
+      {/*        <p className="text-lg text-muted-foreground">*/}
+      {/*          Varapradha Restro brings the authentic taste of India to Hyderabad. Our restaurant combines traditional recipes with modern culinary techniques to create an unforgettable dining experience.*/}
+      {/*        </p>*/}
+      {/*        <p className="text-lg text-muted-foreground">*/}
+      {/*          Located near Sri Indu College, we've been serving the community with love and passion since our establishment. Our chefs use only the freshest ingredients to prepare dishes that capture the essence of Indian cuisine.*/}
+      {/*        </p>*/}
+      {/*        <div className="grid grid-cols-2 gap-4 pt-4">*/}
+      {/*          <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">*/}
+      {/*            <ChefHat className="h-8 w-8 text-primary mb-2" />*/}
+      {/*            <CountUpNumber value={15} duration={2} />*/}
+      {/*            <p className="text-sm text-muted-foreground">Expert Chefs</p>*/}
+      {/*          </div>*/}
+      {/*          <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">*/}
+      {/*            <Award className="h-8 w-8 text-primary mb-2" />*/}
+      {/*            <CountUpNumber value={8} duration={2} />*/}
+      {/*            <p className="text-sm text-muted-foreground">Years of Excellence</p>*/}
+      {/*          </div>*/}
+      {/*          <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">*/}
+      {/*            <ThumbsUp className="h-8 w-8 text-primary mb-2" />*/}
+      {/*            <CountUpNumber value={95} duration={2} />*/}
+      {/*            <p className="text-sm text-muted-foreground">Satisfaction Rate</p>*/}
+      {/*          </div>*/}
+      {/*          <div className="flex flex-col items-center p-4 bg-background rounded-lg shadow-md">*/}
+      {/*            <Users className="h-8 w-8 text-primary mb-2" />*/}
+      {/*            <CountUpNumber value={10000} duration={2} />*/}
+      {/*            <p className="text-sm text-muted-foreground">Happy Customers</p>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      </motion.div>*/}
+      {/*      <motion.div variants={itemVariants} className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">*/}
+      {/*        <Image*/}
+      {/*          src="../app/images/Two.jpg"*/}
+      {/*          alt="Varapradha Restro Interior"*/}
+      {/*          fill*/}
+      {/*          className="object-cover rounded-xl"*/}
+      {/*        />*/}
+      {/*      </motion.div>*/}
+      {/*    </div>*/}
+      {/*  </motion.div>*/}
+      {/*</section>*/}
 
       {/* Featured Menu Section */}
       <section className="py-20 px-4">
@@ -289,7 +289,7 @@ export default function Home() {
         {/* Confetti Overlay */}
         {showConfetti && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-              <Image src="/confetti.gif" alt="Confetti" width={300} height={300} className="pointer-events-none" />
+              <Image src="./images/confetti.gif" alt="Confetti" width={300} height={300} className="pointer-events-none" />
             </div>
         )}
       </section>

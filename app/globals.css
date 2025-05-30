@@ -59,21 +59,21 @@
 }
 
 .hero-section {
-  background-image: url('/VarapradhaRestro.jpg');
+  background-image: url('../app/images/VarapradhaRestro.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .menu-section {
-  background-image: url('/Restro.jpg');
+  background-image: url('../app/images/Restro.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .reservation-section {
-  background-image: url('/Restro.jpg');
+  background-image: url('../app/images/Restro.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
